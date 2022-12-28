@@ -1,0 +1,30 @@
+//descending order
+
+#include <stdio.h>
+ void main ()
+{
+ int number[100];
+ int i, j, n,temp;
+ printf("Enter the total numbers\n");
+ scanf("%d", &n);
+ printf("Enter the numbers \n"); 
+ for (i = 0; i < n; ++i)
+  scanf("%d", &number[i]); 
+for (i = 0; i < n; ++i)
+ {
+   for (j = i + 1; j < n; ++j)
+   {
+    if (number[i] < number[j])
+    {
+     temp= number[i];
+     number[i] = number[j];
+     number[j] = temp;
+   }
+  }
+ }
+ printf("numbers in descending order\n");
+ for (i = 0; i < n; ++i)
+ {
+   printf("%d\n", number[i]);
+ }
+}
