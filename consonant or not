@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main() {
+char l;
+    printf("Enter a letter");
+    scanf("%c",&l);
+    if((l<=122&&l>=97)||(l>=65&&l<=90)){
+    if(l=='a'||l=='A'||l=='e'||l=='E'||l=='o'||l=='O'||l=='i'||l=='I'||l=='u'||l=='U')
+        printf("Not Consonant");
+    else
+        printf("Consonant");
+    }
+    return 0;
+}
