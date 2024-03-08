@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <math.h>
+
+int CheckFibonacci(int n) {
+    return isPerfectSquare(5 * n * n + 4) || isPerfectSquare(5 * n * n - 4);
+}
+
+int isPerfectSquare(int x) {
+    int s = sqrt(x);
+    return (s * s == x);
+}
+
+void main() {
+    int number, output;
+    printf("Enter a number:");
+    scanf("%d", &number);
+    output = CheckFibonacci(number);
+    if (output == 1)
+        printf("%d is a Fibonacci Number.\n", number);
+    else
+        printf("%d is not a Fibonacci Number.\n", number);
+}
